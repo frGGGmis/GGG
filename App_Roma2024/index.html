@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+    <link rel="stylesheet" href="/App_Roma2024/bulma.min.css">
+    <link rel="stylesheet" href="/App_Roma2024/bulma.css">
+    <a href="https://github.com/frGGGmis/GGG/blob/main/App_Roma2024/Prova.html">Apri pagina HTML</a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Europei Roma 2024</title>
+</head>
+<body>
+    <h1>Francesco Prova</h1>
+    <p>trululu</p>
+    <ul>
+        <li>Voce 1</li>
+        <li>Voce 2</li>
+        <li>Voce 3</li>
+    </ul>
+
+    <div class="container">
+        <h1 class="title">Sfoglia documenti PDF</h1>
+        <div class="columns">
+        <div class="column is-one-third">
+            <aside class="menu">
+            <p class="menu-label">
+                Documenti
+            </p>
+            <ul class="menu-list">
+                <li><a href="Documents Database/Presenze_BARI.pdf">Dispositivo Giurie</a></li>
+                <li><a href="Documents Database/Presenze_FOGGIA.pdf">Dispositivo Tecnico</a></li>
+                <!-- Aggiungi altri documenti alla lista -->
+            </ul>
+            </aside>
+        </div>
+    
+        </div>
+    </div>
+    <script>
+        // Aggiungi un gestore di eventi "click" a ogni link nella lista dei documenti
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+          link.addEventListener('click', (event) => {
+            // Impedisci al browser di seguire il link normale e caricare il PDF nell'iframe
+            event.preventDefault();
+            // Recupera l'URL del PDF dal link
+            const url = event.target.getAttribute('href');
+            // Apri il PDF in una nuova scheda del browser
+            window.open(url);
+          });
+        });
+    </script>
+      
+        
+</body>
+</html>
+
